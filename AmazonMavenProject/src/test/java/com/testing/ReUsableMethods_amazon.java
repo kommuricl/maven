@@ -223,7 +223,42 @@ public class ReUsableMethods_amazon{
 	  }
      }
 	 
+
+	  /* Name of the method:tabDropdownMenu
+	   Brief Discription: Checking dropdown menu is displayed or not
+		Arguments:WebElement obj--> to pass dropdownmenu tab name, String objName
+		Created By: Self Team
+		Creatoin Date:7/13/2016
+		Last Modified:7/13/2016
+	*/
 	
+	
+	  public static void tabDropdownMenu(WebElement obj, String objName) throws IOException{
+	  if(obj.isDisplayed()){
+	  //obj.click();
+	  Update_Report("Pass", "Checking " + objName + "dropdown menu is displayed", objName+ " dropdown menu is displayed");
+	  }else{
+	   Update_Report("Pass", "Checking " + objName + "dropdown menu is displayed", objName+ " dropdown menu is not displayed");
+	  }
+	
+	  }
+	
+	  /* Name of the method:elementLink
+	   Brief Discription: Checking the element is displayed or not
+		Arguments:WebElement obj, String objName
+		Created By: Self Team
+		Creatoin Date:7/15/2016
+		Last Modified:7/15/2016
+	*/
+	
+	 
+	  public static void elementLink(WebElement obj, String objName) throws IOException{
+	 if(obj.isDisplayed()){
+	  Update_Report("Pass", "Checking "+objName+" is displayed", objName+" is displayed");
+	  }else{
+	  Update_Report("Fail", "Checking "+objName+" is displayed", objName+" is not displayed");
+	   }
+	  }
 	@Test
 	public void test() throws Exception {
 
